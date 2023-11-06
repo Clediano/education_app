@@ -1,9 +1,13 @@
 import 'package:education_app/core/res/colours.dart';
 import 'package:education_app/core/res/fonts.dart';
-import 'package:education_app/src/onboarding/presentation/onboarding_screen.dart';
+import 'package:education_app/core/services/injection_container.dart';
+import 'package:education_app/core/services/router.dart';
+import 'package:education_app/src/onboarding/presentation/views/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await init();
   runApp(const MyApp());
 }
 
@@ -23,11 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         colorScheme: ColorScheme.fromSwatch(accentColor: Colours.primaryColour),
       ),
-      routes: {
-        OnboardingScreen.routeName: (_) => const OnboardingScreen(),
-      },
       onGenerateRoute: generateRoute,
-      home: const HomePage(),
     );
   }
 }
