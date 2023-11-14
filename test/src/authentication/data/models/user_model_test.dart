@@ -1,11 +1,12 @@
 import 'dart:convert';
 
 import 'package:education_app/core/utils/typedefs.dart';
-import 'package:education_app/src/authentication/domain/data/models/user_model.dart';
+import 'package:education_app/src/authentication/data/models/user_model.dart';
 import 'package:education_app/src/authentication/domain/entities/user.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../../../../fixtures/fixture_reader.dart';
+import '../../../../fixtures/fixture_reader.dart';
+
 
 void main() {
   const tLocalUserModel = LocalUserModel.empty();
