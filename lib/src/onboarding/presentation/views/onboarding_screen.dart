@@ -38,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             if (state is OnboardingStatus && !state.isFirstTime) {
               Navigator.pushReplacementNamed(context, '/home');
             } else if (state is UserCached) {
-              // TODO(User-Cached-Handler): push to the appropriated screen
+              Navigator.pushReplacementNamed(context, '/');
             }
           },
           builder: (context, state) {
@@ -76,7 +76,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       dotColor: Colors.white,
                     ),
                   ),
-                )
+                ),
               ],
             );
           },

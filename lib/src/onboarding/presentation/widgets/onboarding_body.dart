@@ -1,4 +1,4 @@
-import 'package:education_app/core/common/views/extensions/context_extensions.dart';
+import 'package:education_app/core/extensions/context_extensions.dart';
 import 'package:education_app/core/res/colours.dart';
 import 'package:education_app/core/res/fonts.dart';
 import 'package:education_app/src/onboarding/domain/entities/page_content.dart';
