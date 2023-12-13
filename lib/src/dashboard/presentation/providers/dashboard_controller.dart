@@ -1,5 +1,6 @@
 import 'package:education_app/core/common/app/providers/tab_navigator.dart';
 import 'package:education_app/core/common/views/persistence_view.dart';
+import 'package:education_app/src/profile/presentation/views/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,12 +13,36 @@ class DashboardController extends ChangeNotifier {
         TabItem(child: const Placeholder()),
       ),
       child: const PersistenceView(),
-    )
+    ),
+    ChangeNotifierProvider(
+      create: (_) => TabNavigator(
+        TabItem(child: const Placeholder()),
+      ),
+      child: const PersistenceView(),
+    ),
+    ChangeNotifierProvider(
+      create: (_) => TabNavigator(
+        TabItem(child: const Placeholder()),
+      ),
+      child: const PersistenceView(),
+    ),
+    ChangeNotifierProvider(
+      create: (_) => TabNavigator(
+        TabItem(child: const Placeholder()),
+      ),
+      child: const PersistenceView(),
+    ),
+    ChangeNotifierProvider(
+      create: (_) => TabNavigator(
+        TabItem(child: const ProfileView()),
+      ),
+      child: const PersistenceView(),
+    ),
   ];
 
   List<Widget> get screens => _screens;
 
-  int _currentIndex = 3;
+  int _currentIndex = 4;
 
   int get currentIndex => _currentIndex;
 
