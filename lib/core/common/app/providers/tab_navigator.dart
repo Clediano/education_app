@@ -13,6 +13,8 @@ class TabNavigator extends ChangeNotifier {
 
   TabItem get currentPage => _navigationStack.last;
 
+  bool get canPopPage => _navigationStack.length > 1;
+
   void push(TabItem page) {
     _navigationStack.add(page);
     notifyListeners();
